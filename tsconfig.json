@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "System",
+    "lib": ["es2019"],
+    "outFile": "./bin/index.js",
+    "sourceMap": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "experimentalDecorators": false,
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*.ts", "./@types"]
+}

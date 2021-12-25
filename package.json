@@ -1,0 +1,178 @@
+{
+  "name": "@solidity-utilities/abi-to-interface",
+  "version": "0.0.1",
+  "description": "JavaScript CLI tool for converting contract ABI to Solidity interface contract",
+  "main": "bin/index.js",
+  "preferGlobal": true,
+  "bin": {
+    "solidity-abi-to-interface": "bin/index.js"
+  },
+  "scripts": {
+    "test": "mocha",
+    "ts-build": "tsc --build && chmod u+x bin/index.js",
+    "ts-watch": "tsc --watch",
+    "ci-build": "npm run ts-build && npm test"
+  },
+  "cli": {
+    "abi": {
+      "help": "JSON file path to parse",
+      "parameters": [
+        "--abi",
+        "--in",
+        "--json"
+      ],
+      "value_type": "string"
+    },
+    "clobber": {
+      "help": "Allow overwriting of existing '--out' file",
+      "parameters": [
+        "--clobber"
+      ],
+      "value_default": false,
+      "value_type": "boolean"
+    },
+    "exclude_events": {
+      "help": "Skip parsing and output of events",
+      "parameters": [
+        "--exclude-events"
+      ],
+      "value_default": false,
+      "value_type": "boolean"
+    },
+    "exclude_functions": {
+      "help": "Skip parsing and output of functions",
+      "parameters": [
+        "--exclude-functions"
+      ],
+      "value_default": false,
+      "value_type": "boolean"
+    },
+    "exclude_variables": {
+      "help": "Skip parsing and output of variables",
+      "parameters": [
+        "--exclude-variables"
+      ],
+      "value_default": false,
+      "value_type": "boolean"
+    },
+    "help": {
+      "help": "Print usage tips and exit",
+      "parameters": [
+        "-h",
+        "--help",
+        "--usage"
+      ],
+      "value_default": false,
+      "value_type": "boolean"
+    },
+    "import_contracts": {
+      "help": "Import non-target contracts instead of re-emitting",
+      "parameters": [
+        "--import-contracts"
+      ],
+      "value_default": false,
+      "value_type": "boolean"
+    },
+    "import_enums": {
+      "help": "Import globally declared enums instead of re-emitting",
+      "parameters": [
+        "--import-enums"
+      ],
+      "value_default": false,
+      "value_type": "boolean"
+    },
+    "import_structs": {
+      "help": "Import globally declared structs instead of re-emitting",
+      "parameters": [
+        "--import-structs"
+      ],
+      "value_default": false,
+      "value_type": "boolean"
+    },
+    "include_documentation": {
+      "help": "Emit user and developemnt documentation",
+      "parameters": [
+        "--include-documentation"
+      ],
+      "value_default": false,
+      "value_type": "boolean"
+    },
+    "out": {
+      "help": "Contract file path to write",
+      "parameters": [
+        "--out"
+      ],
+      "value_type": "string"
+    },
+    "package_json": {
+      "help": "Path to package.json file for target ABI",
+      "parameters": [
+        "--package-json"
+      ],
+      "value_type": "string"
+    },
+    "prefix": {
+      "help": "Prefix to apply to contract name",
+      "parameters": [
+        "--prefix"
+      ],
+      "value_default": "Interface",
+      "value_type": "string"
+    },
+    "suffix": {
+      "help": "Suffix to apply to contract name",
+      "parameters": [
+        "--suffix"
+      ],
+      "value_type": "string"
+    },
+    "verbose": {
+      "help": "Print information during execution",
+      "parameters": [
+        "--verbose"
+      ],
+      "value_default": false,
+      "value_type": "boolean"
+    },
+    "version": {
+      "help": "Print version and exit",
+      "parameters": [
+        "--version"
+      ],
+      "value_default": false,
+      "value_type": "boolean"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/solidity-utilities/abi-to-interface.git"
+  },
+  "keywords": [
+    "solidity"
+  ],
+  "author": "S0AndS0",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/solidity-utilities/abi-to-interface/issues"
+  },
+  "homepage": "https://github.com/solidity-utilities/abi-to-interface#readme",
+  "funding": {
+    "type": "individual",
+    "url": "https://liberapay.com/solidity-utilities/"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://liberapay.com/solidity-utilities/"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.11.6",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "source-map-support": "^0.5.20"
+  }
+}

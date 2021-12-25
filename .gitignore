@@ -1,0 +1,12 @@
+# Vim
+*.swp
+
+# Truffle
+build
+
+# soldocgen
+docs
+
+# NPM
+node_modules
+
